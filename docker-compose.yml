@@ -1,0 +1,16 @@
+# Local development database (used from Stage 2).
+# Start: docker compose up -d     Stop: docker compose down
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    environment:
+      POSTGRES_DB: sidewalks
+      POSTGRES_USER: sidewalks
+      POSTGRES_PASSWORD: sidewalks   # dev only; production uses a real secret
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data   # keeps data between restarts
+
+volumes:
+  pgdata:
