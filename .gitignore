@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node (frontend, from Stage 5)
+node_modules/
+dist/
+
+# Secrets
+.env
+
+# Downloaded data and imagery
+data/
+*.tif
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store
